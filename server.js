@@ -21,7 +21,7 @@ app.get("/fetch_billing", async (req, res) => {
         const todayStart = new Date();
         todayStart.setHours(0, 0, 0, 0);
         const order_completed_end_time = Math.floor(todayStart.getTime() / 1000);
-        const order_completed_start_time = order_completed_end_time - 86400 * 90; // 90 ngày
+        const order_completed_start_time = order_completed_end_time - 86400 * 30 * 6; // 180 ngày
 
         // URL API Shopee
         const url = "https://affiliate.shopee.vn/api/v1/payment/billing_list";
